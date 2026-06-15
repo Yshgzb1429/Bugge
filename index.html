@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Preet ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Segoe UI',sans-serif;
+color:white;
+overflow-x:hidden;
+min-height:100vh;
+}
+body::before{
+content:'';
+position:fixed;
+inset:0;
+background:url('preet.jpg') center center/cover no-repeat;
+filter:blur(6px) brightness(0.35);
+transform:scale(1.08);
+z-index:-2;
+}
+body::after{
+content:'';
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.18);
+z-index:-1;
+}
+.wrapper{
+max-width:900px;
+margin:auto;
+padding:80px 25px;
+text-align:center;
+}
+h1{
+font-size:clamp(2.8rem,7vw,5rem);
+color:#ff7aa8;
+text-shadow:0 0 25px rgba(255,120,170,.7);
+margin-bottom:18px;
+}
+.subtitle{
+font-size:1.2rem;
+opacity:.95;
+margin-bottom:40px;
+}
+.counter{
+margin:35px auto;
+font-size:1.3rem;
+font-weight:700;
+color:#ffd3e1;
+text-shadow:0 0 15px rgba(255,255,255,.5);
+}
+.message{
+font-size:1.12rem;
+line-height:2;
+text-align:left;
+text-shadow:0 2px 12px rgba(0,0,0,.8);
+}
+.message p{margin-bottom:22px;}
+.heart{
+position:fixed;
+pointer-events:none;
+animation:floatUp linear forwards;
+}
+@keyframes floatUp{
+from{transform:translateY(100vh);opacity:0}
+20%{opacity:1}
+to{transform:translateY(-120px);opacity:0}
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="wrapper">
+<h1>I'm Sorry, Preet ❤️</h1>
+<div class="subtitle">A small website for someone very special 🥺</div>
+<div class="counter">Missing your smile: Every single second 😭❤️</div>
+
+<div class="message">
+<p><strong>Hey Preet,</strong></p>
+
+<p>I am really very sorry. That day I got a little too carried away with my emotions. And Sachhii I don't usually open up or express my feelings lyk that in front of you, but that day I was feeling overwhelmed about a few things that I can't even properly explain myself.</p>
+
+<p>I don't know how my voice got raised, and I ended up saying something else in a way that I never intended to. Looking back, I genuinely regret it.</p>
+
+<p>But please trust me on this — I could never even imagine hurting your feelings or making you feel bad. You mean so much to me, and the last thing I would ever want is for my words or actions to upset u. U r someone I care about deeply, and it breaks my heart knowing that my words may have hurt you bcz you hold such a special place in my life more than you probably realize.</p>
+
+<p>You are incredibly precious to me, and the thought of making you feel hurt or bad is something I never want to be responsible for.</p>
+
+<p>I know a simple "sorry" may not fix everything, but it comes from my heart. If I could go back and change that moment I would. Please don't let one bad day make you forget how much respect, care, and affection I have for you.</p>
+
+<p>And please, don't stay upset for too long... the world already has enough serious people. I need my favorite drama queen back because life feels a little too peaceful without your arguments 😭</p>
+
+<p>Please maan ja na, bugge. I am very, very sorry.</p>
+
+<p>Tu maarliyo yr mereko thoda sa... but please zyada mat maarna, mujhe bhi warranty ke andar rehna hai. 😭❤️</p>
+</div>
+</div>
+
+<script>
+function createHeart(){
+ const h=document.createElement('div');
+ h.classList.add('heart');
+ h.innerHTML=['❤️','💖','💕','💗'][Math.floor(Math.random()*4)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(15+Math.random()*25)+'px';
+ h.style.animationDuration=(5+Math.random()*5)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),10000);
+}
+setInterval(createHeart,250);
+</script>
+
+</body>
+</html>
