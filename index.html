@@ -69,6 +69,33 @@ from{transform:translateY(100vh);opacity:0}
 20%{opacity:1}
 to{transform:translateY(-120px);opacity:0}
 }
+.buttons{
+margin:35px 0 50px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+#hugBtn,#slapBtn{
+padding:14px 28px;
+border:none;
+border-radius:40px;
+font-size:1rem;
+font-weight:700;
+cursor:pointer;
+box-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+#hugBtn{
+background:#ff6ea8;
+color:white;
+}
+
+#slapBtn{
+background:white;
+color:#333;
+}
 </style>
 </head>
 <body>
@@ -102,6 +129,10 @@ to{transform:translateY(-120px);opacity:0}
 <p>Tu maarliyo yr mereko thoda sa... but please zyada mat maarna, mujhe bhi warranty ke andar rehna hai. 😭❤️</p>
 </div>
 </div>
+<div class="buttons">
+    <button id="hugBtn">🤗 Send Hug</button>
+    <button id="slapBtn">👋 Send Slap</button>
+</div>
 
 <script>
 function createHeart(){
@@ -115,7 +146,28 @@ function createHeart(){
  setTimeout(()=>h.remove(),10000);
 }
 setInterval(createHeart,250);
-</script>
 
-</body>
-</html>
+document.getElementById("hugBtn").addEventListener("click",()=>{
+    alert("🤗 Hug delivered successfully to Bugge ❤️");
+});
+
+const slapBtn=document.getElementById("slapBtn");
+
+function moveSlapButton(){
+    const maxX=window.innerWidth-slapBtn.offsetWidth-30;
+    const maxY=window.innerHeight-slapBtn.offsetHeight-30;
+
+    slapBtn.style.position="fixed";
+    slapBtn.style.left=Math.random()*maxX+"px";
+    slapBtn.style.top=Math.random()*maxY+"px";
+}
+
+slapBtn.addEventListener("mouseenter",moveSlapButton);
+
+slapBtn.addEventListener("touchstart",function(e){
+    e.preventDefault();
+    moveSlapButton();
+});
+
+slapBtn.addEventListener("click",moveSlapButton);
+</script>
