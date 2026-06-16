@@ -91,7 +91,7 @@ vol.oninput=()=>audio.volume=vol.value;
 
 function heart(){
  let h=document.createElement('div');
- h.innerHTML=['❤️','💖','💕','🌹','✨'][Math.floor(Math.random()*5)];
+ h.innerHTML=['❤️','💕','✨'][Math.floor(Math.random()*3)];
  h.style.cssText=`position:fixed;left:${Math.random()*100}vw;bottom:-20px;font-size:${20+Math.random()*30}px;pointer-events:none;animation:f 8s linear forwards;z-index:999`;
  document.body.appendChild(h);
  setTimeout(()=>h.remove(),8000);
